@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+
+//start----------补丁相关
+apply plugin: 'patch-gradle-plugin'
+//生成jar包插件
+apply plugin: 'jar-gradle-plugin'
+//end------------补丁相关
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "com.peixunfan.trainfans"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 100
+        versionName "1.0.0"
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'feeliu'
+            keyPassword 'fljt2010'
+            storeFile file('../feeliuAndroid.key')
+            storePassword 'fljt2010'
+        }
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            shrinkResources false
+//            signingConfig signingConfigs.config
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        disable 'InvalidPackage', 'MissingTranslation', 'ExtraTranslation'
+        abortOnError false
+    }
+}
+
+retrolambda {
+    javaVersion JavaVersion.VERSION_1_6
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':androidlib')
+    // 默认 UI
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:design:24.0.0'
+    compile 'com.android.support:cardview-v7:24.0.0'
+    compile 'com.android.support:support-v4:24.0.0'
+    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+
+
+    //注解<编译时注解>
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.tellh:autogo-core:1.0.3'
+    apt 'com.tellh:autogo-compiler:1.0.3'
+
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+
+}
+

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">培训范</string>
+
+    <string name="pxf_tab_home">首页</string>
+    <string name="pxf_tab_class">发现</string>
+    <string name="pxf_tab_profile">我的</string>
+
+    <!---->
+    <string name="money_lable">¥</string>
+
+
+</resources>

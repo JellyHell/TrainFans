@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--收起按钮-->
+    <ImageView
+        android:id="@+id/close_img"
+        android:layout_width="80.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitStart"
+        android:src="@drawable/img_menu_close"/>
+
+    <!--群发红包-->
+    <RelativeLayout
+        android:id="@+id/rlv_group_sendSMS"
+        android:alpha="0"
+        android:layout_marginLeft="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_group_sendSMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icon_groupsendmsg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="群发消息"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/iv_group_sendSMS"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_ffffff"/>
+    </RelativeLayout>
+
+    <!--扫一扫-->
+    <RelativeLayout
+        android:id="@+id/rlv_qrcode_scanner"
+        android:layout_width="wrap_content"
+        android:alpha="0"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="28dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_qrcode_scanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icon_scanercode"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="扫一扫"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/iv_qrcode_scanner"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_ffffff"/>
+
+    </RelativeLayout>
+
+    <!--添加学员-->
+    <RelativeLayout
+        android:id="@+id/rlv_add_student"
+        android:alpha="0"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_add_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icon_addstudent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:text="添加学员"
+            android:layout_below="@+id/iv_add_student"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_ffffff"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

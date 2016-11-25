@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlv_bottom_bt"/>
+
+    <RelativeLayout
+        android:id="@+id/rlv_bottom_bt"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ffffff">
+
+        <RelativeLayout
+            android:id="@+id/rlv_complete_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_public_select_button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存修改"
+                android:textSize="17sp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/color_ffffff"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

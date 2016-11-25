@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--1.CircleImageView-->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="leftViewId" format="reference" />
+        <attr name="rightViewId" format="reference" />
+        <attr name="contentViewId" format="reference" />
+    </declare-styleable>
+</resources>

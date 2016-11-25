@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 首页－－类别 -->
+    <string-array name="erp_home_type">
+        <item>报名</item>
+        <item>上课记录</item>
+        <item>发工资</item>
+        <item>课表</item>
+        <item>学员</item>
+        <item>班级</item>
+        <item>课程</item>
+        <item>老师</item>
+        <item>续费预警</item>
+        <item>意向学员</item>
+        <item>账单</item>
+        <item></item>
+    </string-array>
+
+    <!--个人中心-->
+    <string-array name="user_center_type">
+        <item>扫一扫</item>
+        <item>收款码</item>
+        <item>帮助</item>
+        <item>设置</item>
+    </string-array>
+
+    <!--报名-学生信息-->
+    <string-array name="signup_studentinfo">
+        <item>学生姓名</item>
+        <item>手机号</item>
+        <item>出生日期</item>
+        <item>学校</item>
+        <item>性别</item>
+        <item>年级</item>
+        <item>生源</item>
+        <item>备用手机号</item>
+        <item>住址</item>
+    </string-array>
+
+    <!--报名-费用信息-->
+    <string-array name="signup_moneyinfo">
+        <item>其他费用</item>
+        <item>应收金额</item>
+        <item>实收金额</item>
+        <item>付款日期</item>
+        <item>支付方式</item>
+        <item>经办人</item>
+        <item>备注</item>
+    </string-array>
+
+    <!--课程-基本信息-->
+    <string-array name="course_base_info">
+        <item>课程名称</item>
+        <item>课程类型</item>
+        <item>授课类型</item>
+        <item>单节时长/分</item>
+        <item>收费方式</item>
+    </string-array>
+
+    <!--课程-按课节收费-->
+    <string-array name="course_info_byclass">
+        <item>课节单价</item>
+    </string-array>
+
+    <!--课程-按期收费-->
+    <string-array name="course_class_byterm">
+        <item>总课节数</item>
+        <item>课程总价</item>
+    </string-array>
+
+    <!--课程-一对多情况下-未到情况处理-->
+    <string-array name="course_class_nocome_type">
+        <item>未到学生标记补课</item>
+    </string-array>
+
+
+</resources>

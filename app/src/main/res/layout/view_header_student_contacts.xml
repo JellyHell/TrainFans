@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/background_for_all">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/color_ffffff"
+        android:layout_marginTop="10dp">
+
+    <!--输入框-->
+    <EditText
+        android:id="@+id/etv_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/rlv_right_view"
+        android:layout_toRightOf="@+id/tv_cell_title"
+        android:background="@android:color/transparent"
+        android:dropDownVerticalOffset="10.0dip"
+        android:dropDownWidth="wrap_content"
+        android:imeOptions="actionNext"
+        android:padding="8.0dip"
+        android:hint="填写沟通记录..."
+        android:textColor="@color/base_gray"
+        android:textColorHint="@color/color_a0a0a0"
+        android:textCursorDrawable="@null"
+        android:textSize="15.0sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

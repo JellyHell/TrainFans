@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/bg_homebanner">
+
+    <RelativeLayout
+        android:id="@+id/top_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:id="@+id/iv_basetitle_leftimg"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitStart"
+            android:src="@drawable/icon_home_add"/>
+
+        <!-- 中部标题 -->
+        <TextView
+            android:id="@+id/tv_basetitle_cetener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:singleLine="true"
+            android:text="贝多多钢琴机构"
+            android:textColor="@color/color_ffffff"
+            android:textSize="20.0sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_basetitle_rightimg"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitEnd"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_home_message" />
+
+    </RelativeLayout>
+
+    <!--Money Title-->
+    <TextView
+        android:id="@+id/tv_money_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:textSize="13sp"
+        android:textColor="@color/color_def3eb"
+        android:text="今日入账(元)"/>
+
+    <TextView
+        android:id="@+id/tv_money_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_money_title"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_ffffff"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3"
+        android:layout_height="42dp">
+
+        <!--本月实收-->
+        <RelativeLayout
+            android:id="@+id/left_income_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/left_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_ffffff"
+                android:text="0.00"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/left_income_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/gray_on_blue"
+                android:text="本月实收(元)"
+                android:layout_below="@+id/left_income"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"/>
+
+        </RelativeLayout>
+
+        <!--课消金融-->
+        <RelativeLayout
+            android:id="@+id/center_income_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/center_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_ffffff"
+                android:text="0.00"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/center_income_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/gray_on_blue"
+                android:text="课消金融(元)"
+                android:layout_below="@+id/center_income"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"/>
+
+        </RelativeLayout>
+
+        <!--老师课时-->
+        <RelativeLayout
+            android:id="@+id/right_income_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/right_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_ffffff"
+                android:text="0.00"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/right_income_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/gray_on_blue"
+                android:text="老师课时"
+                android:layout_below="@+id/right_income"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

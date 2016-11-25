@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+    <RelativeLayout
+        android:id="@+id/container_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/rlv_title_layout">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ffffff">
+
+        <View
+            android:id="@+id/top_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/background_for_all"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_below="@+id/top_line"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_payback_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/icon_selected"/>
+
+                <TextView
+                    android:id="@+id/tv_payback_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退费"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_payback_money"/>
+
+                <ImageView
+                    android:id="@+id/iv_withdraw_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/tv_payback_money"
+                    android:background="@drawable/icon_no_selected"/>
+
+                <TextView
+                    android:id="@+id/tv_withdraw_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充值"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_withdraw_money"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/query"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/bg_editview_drawable"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="输入金额"
+                    android:textColor="@color/base_gray"
+                    android:textColorHint="@color/color_a0a0a0"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_public_select_button"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:text="确定"
+                    android:textColor="@color/color_ffffff"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

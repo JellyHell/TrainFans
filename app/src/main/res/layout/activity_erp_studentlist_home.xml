@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_all">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+    <RelativeLayout
+        android:id="@+id/rlv_header_tipview"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/rlv_title_layout"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/iv_error_tip_img"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/icon_header_small_error"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_error_tip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="共有5名同学未排班，请尽快处理"
+            android:layout_toRightOf="@+id/iv_error_tip_img"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/base_gray"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlv_header_tipview">
+    </RelativeLayout>
+
+</RelativeLayout>

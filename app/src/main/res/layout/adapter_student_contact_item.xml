@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlv_contact_time"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp">
+
+        <TextView
+            android:id="@+id/tv_contact_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textSize="15sp"
+            android:text="2016.11.23 22:00:00"
+            android:textColor="@color/base_gray"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/rlv_contact_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:id="@+id/tv_contact_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:text="基本可以确定这孩子是一朵奇葩，基本可以确定这孩子是一朵奇葩，基本可以确定这孩子是一朵奇葩，基本可以确定这孩子是一朵奇葩，基本可以确定这孩子是一朵奇葩，"
+            android:layout_marginBottom="8dp"
+            android:textSize="15sp"
+            android:textColor="@color/color_a0a0a0"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

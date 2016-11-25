@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff">
+
+    <!--其他费用-->
+    <TextView
+        android:id="@+id/tv_other_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:text="其他费用: 0元"
+        android:textColor="@color/base_gray"/>
+
+    <!--应缴金额-->
+    <TextView
+        android:id="@+id/tv_should_pay_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/tv_other_money"
+        android:text="应缴金额: 0元"
+        android:textColor="@color/base_gray"/>
+
+    <!--实缴金额-->
+    <TextView
+        android:id="@+id/tv_has_payed_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/tv_should_pay_money"
+        android:text="实缴金额: 0元"
+        android:textColor="@color/base_gray"/>
+
+    <!--支付方式-->
+    <TextView
+        android:id="@+id/tv_pay_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/tv_has_payed_money"
+        android:text="支付方式: 现金"
+        android:textColor="@color/base_gray"/>
+
+    <!--备    注-->
+    <TextView
+        android:id="@+id/tv_remark_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/tv_pay_type"
+        android:text="备        注:"
+        android:textColor="@color/base_gray"/>
+
+    <!--备注内容-->
+    <TextView
+        android:id="@+id/tv_remark_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_toRightOf="@+id/tv_remark_title"
+        android:textSize="15sp"
+        android:layout_below="@+id/tv_pay_type"
+        android:text="这家伙还差3600元没交,他说下个月发了工资再交，记得到时候找他要哈"
+        android:textColor="@color/color_a0a0a0"/>
+
+
+
+
+</RelativeLayout>

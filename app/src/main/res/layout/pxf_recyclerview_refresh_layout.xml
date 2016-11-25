@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiprefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/rlv_banner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200.0dip"
+                    android:visibility="gone"
+                    layout="@layout/view_erphome_banner" />
+
+                <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/rlv_banner_layout"
+                    android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

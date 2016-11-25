@@ -1,0 +1,6 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="buttontoast_hover">24dp</dimen>
+    <dimen name="buttontoast_x_padding">12dp</dimen>
+    <dimen name="toast_hover">64dp</dimen>
+</resources>

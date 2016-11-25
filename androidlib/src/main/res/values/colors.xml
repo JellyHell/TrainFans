@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--widgt-->
+    <color name="color_ffffff">#ffffffff</color>
+    <color name="light_gray">#AFFFFFFF</color>
+</resources>

@@ -1,0 +1,119 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+
+##########################基本混淆#############################
+#1.代码混淆压缩比，在0-7之间，默认为5，一般不需要修改
+-optimizationpasses 5
+
+#2.混淆时不使用大小写混合，混淆后的类为小写
+-dontusemixedcaseclassnames
+
+#3.指定不去忽略非公共的库的类
+-dontskipnonpubliclibraryclasses
+
+#4.指定不去忽略非公共的库的类的成员
+-dontskipnonpubliclibraryclassmembers
+
+#5.不做预校验，Android不需要这一步，去掉可加快混淆速度
+-dontpreverify
+
+#6.设置映射及映射文件名称
+-verbose
+-printmapping proguardMapping.txt
+
+#7.指定混淆采用的算法
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+#8.保护代码中的Annotation不被混淆
+-keepattributes *Annotation*
+
+#9.避免混淆泛型
+-keepattributes Signature
+
+#10.抛出异常是保留代码行号
+-keepattributes SourceFile,LineNumberTable
+
+##########################声明需要保留的内容#############################
+#1.保留本地的Native方法不被混淆
+-keepclasseswithmembernames class * {
+        native <methods>;
+}
+
+#2.保留继承自Activity、Application的这些类
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class * extends android.view.View
+-keep public class * extends android.app.Fragment
+-keep public class * extends com.android.vending.licensing.ILicensingService
+
+#4.枚举类不被混淆
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+#5.保留自定义控件不被混淆
+-keep public class * extends android.view.View{
+    *** get*();
+    void set*(***);
+    public <init>(android.content.Context);
+    public <init>(android.content.Context,android.util.AttributeSet);
+    public <init>(android.content.Context,android.util.AttributeSet,int);
+}
+
+#6.保留Parceable序列化的类不被混淆
+-keep class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
+#7.保留Serializable序列化的类不被混淆
+-keepclassmembers class * implements java.io.Serializable{
+    static final long SerialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+#8.对于R下的所有类及其方法，都不能被混淆
+-keep class **.R$*{
+    *;
+}
+
+#9.对Webview的处理
+-keepclassmembers class * extends android.webkit.webViewClient{
+    public void *(android.webkit.WebView,java.lang.String,android.graphics.Bitmap);
+
+    public boolean *(android.webkit.webView,java.lang.String);
+}
+
+-keepclassmembers class * extends android.webkit.webViewClient{
+    public void *(android.webkit.webView,java.lang.String);
+}
+
+#10.自定义View
+
+##########################针对第三方jar包#############################
+-keep class android.support.v4.** {*;}
+-keep class android.support.v13.** {*;}
+-keep public class * extends android.support.v4.**
+-keep class android.support.v7.widget.RoundRectDrawable { *; }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1ad6a8</color>
+    <color name="colorPrimaryDark">#1ad6a8</color>
+    <color name="colorAccent">#1ad6a8</color>
+    <color name="bg_all">#ffededf0</color>
+    <color name="color_3571b0">#ff3571b0</color>
+    <color name="transparent">#00000000</color>
+
+    <!--widgt-->
+    <color name="color_ffffff">#ffffffff</color>
+    <color name="light_gray">#AFFFFFFF</color>
+    <!--widgt-->
+
+    <!--App-->
+    <color name="main_color">#1ad6a8</color>
+    <color name="black">#000000</color>
+    <color name="gray_on_blue">#def3eb</color>
+    <color name="base_gray">#7b7b81</color>
+    <color name="color_def3eb">#def3eb</color>
+    <color name="color_a0a0a0">#a0a0a0</color>
+
+    <color name="color_59a0e5">#59a0e5</color>
+    <color name="color_8f6fe9">#8f6fe9</color>
+
+
+
+</resources>

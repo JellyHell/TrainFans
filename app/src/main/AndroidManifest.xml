@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.peixunfan.trainfans"
+    android:versionCode="100"
+    android:versionName="1.0.0">
+
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--用于访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
+    <application
+        android:name=".Application.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true">
+
+        <activity
+            android:name="com.peixunfan.trainfans.Base.LaunchActivity"
+            android:theme="@style/Theme.start">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- 主页 -->
+        <activity
+            android:name="com.peixunfan.trainfans.Base.BaseTabActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+
+        <!--消息首页-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.Message.Controller.MessageListAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--报名(填写信息)-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.SignUp.Controller.SignUpAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--学员(首页)-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentListAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--学员(详情)-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentDetailInfoAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+        <!--学员(上课记录)-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentAttendClassRecordAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+        <!--学员(学员退费列表)-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentPaybackMoneyListAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+        <!--学员(学员退费详情)-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentPaybackDetailAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--课程(课程列表)-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.Courses.Controller.CourseHomeListAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--课程(编辑课程)-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.Courses.Controller.EditCourseAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--课程(添加课程)-->
+        <activity
+            android:name="com.peixunfan.trainfans.ERP.Courses.Controller.AddCouserAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+
+        <activity
+            android:name="com.peixunfan.trainfans.SecondActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+    </application>
+
+</manifest>
