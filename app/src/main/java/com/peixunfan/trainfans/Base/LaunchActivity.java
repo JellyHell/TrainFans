@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
 
+import com.infrastructure.utils.IntentUtil;
+import com.peixunfan.trainfans.Login.Controller.LoginAct;
 import com.peixunfan.trainfans.R;
+import com.peixunfan.trainfans.Utils.SPManager.UserInfoMangager;
 
 /**
  * Created by Administrator on 2016/8/9.
@@ -17,17 +20,15 @@ public class LaunchActivity  extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acitivity_welcome_layout);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                forwardToHomeAct();
-            }
-        }, 1500);
+        new Handler().postDelayed(() -> forwardToHomeAct(), 1500);
     }
 
     private void forwardToHomeAct(){
-        Intent aIntent = new Intent(this,BaseTabActivity.class);
-        startActivity(aIntent);
+        if(UserInfoMangager.isLogined(this)){
+            IntentUtil.forwordToActivity(this, BaseTabActivity.class);
+        }else{
+            IntentUtil.forwordToActivity(this, LoginAct.class);
+        }
         finish();
     }
 

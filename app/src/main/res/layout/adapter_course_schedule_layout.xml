@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/color_ffffff"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/devider_line"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/background_for_all"/>
+
+    <View
+        android:id="@+id/week_left_line"
+        android:layout_marginLeft="2dp"
+        android:layout_width="0.5dp"
+        android:visibility="gone"
+        android:background="@drawable/background_for_all"
+        android:layout_height="match_parent"/>
+
+
+    <RelativeLayout
+        android:layout_toRightOf="@+id/week_left_line"
+        android:layout_width="100dp"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlv_date_info"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/color_f5f6f9">
+
+            <TextView
+                android:id="@+id/tv_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="14sp"
+                android:text="12月1号"
+                android:textColor="@color/base_gray"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/background_for_all"/>
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_below="@+id/rlv_date_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

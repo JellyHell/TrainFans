@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cell_item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    app:cardElevation="0dp"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+
+        <ImageView
+            android:id="@+id/iv_student_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_sex_man"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_student_name"
+            android:layout_toRightOf="@+id/iv_student_sex"
+            android:textColor="@color/base_gray"
+            android:textSize="15sp"
+            android:layout_marginTop="9.5dp"
+            android:layout_marginLeft="8dp"
+            android:text="王大鹏"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_student_mobile"
+            android:layout_toRightOf="@+id/tv_student_name"
+            android:textColor="@color/color_a0a0a0"
+            android:textSize="14sp"
+            android:layout_marginTop="10.5dp"
+            android:layout_marginLeft="8dp"
+            android:text="18811778682"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_class_info"
+            android:layout_alignLeft="@+id/tv_student_name"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/base_gray"
+            android:textSize="13sp"
+            android:drawableLeft="@drawable/icon_class_type_team"
+            android:drawablePadding="4dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_toLeftOf="@+id/tv_class_info_remain"
+            android:text="钢琴不辣不多(班级) 拉布拉多一级"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_class_info_remain"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/base_gray"
+            android:textSize="13sp"
+            android:drawableLeft="@drawable/icon_course_cont"
+            android:drawablePadding="4dp"
+            android:text="剩余2课节"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/right_iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_select_arrow"
+            android:visibility="visible" />
+
+
+        <View
+            android:id="@+id/class_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/background_for_all" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

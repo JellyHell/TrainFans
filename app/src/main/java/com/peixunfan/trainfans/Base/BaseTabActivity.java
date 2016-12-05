@@ -20,7 +20,7 @@ import com.peixunfan.trainfans.Application.App;
 import com.peixunfan.trainfans.ERP.Home.Controller.ERPHomeFragment;
 import com.peixunfan.trainfans.R;
 import com.peixunfan.trainfans.Recovery.Controller.RecoveryHomeFragment;
-import com.peixunfan.trainfans.UserCenter.Controller.UsercenterHomeFragment;
+import com.peixunfan.trainfans.UserCenter.Home.Controller.UsercenterHomeFragment;
 
 
 /**

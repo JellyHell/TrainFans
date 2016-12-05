@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+    <TextView
+        android:id="@+id/tv_base_function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/base_gray"
+        android:textSize="15sp"
+        android:lineSpacingMultiplier="1.3"/>
+
+
+    <TextView
+        android:id="@+id/tv_otherfunction_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:layout_below="@+id/tv_base_function"
+        android:textColor="@color/base_gray"
+        android:text="功能"/>
+
+
+    <TextView
+        android:id="@+id/tv_otherfunction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="18dp"
+        android:textSize="14sp"
+        android:lineSpacingMultiplier="1.3"
+        android:layout_below="@+id/tv_otherfunction_title"
+        android:textColor="@color/base_gray" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_bottom_manager_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_public_select_button">
+
+
+        <TextView
+            android:id="@+id/tv_bottom_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_ffffff"
+            android:textSize="15sp"
+            android:text="去认证为工作室"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

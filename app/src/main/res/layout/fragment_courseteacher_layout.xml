@@ -18,6 +18,7 @@
         android:background="@drawable/bg_public_select_button">
 
         <TextView
+            android:id="@+id/tv_bottom_title"
             android:textSize="16sp"
             android:textColor="@color/color_ffffff"
             android:text="添加授课老师"

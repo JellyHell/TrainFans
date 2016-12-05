@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_all">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+
+    <RelativeLayout
+        android:id="@+id/container_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/rlv_title_layout">
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_send_contact"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_public_select_button">
+
+        <TextView
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交沟通记录"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

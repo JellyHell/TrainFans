@@ -19,7 +19,7 @@ public class AddCouserAct  extends BaseActivity {
 
     FragmentManager manager;
 
-    @Bind(R.id.eidtinfo_fragment)
+    @Bind(R.id.left_fragment)
     FrameLayout frameLayout;
 
     CourseInfoEditFragment courseInfoEditFragment;
@@ -35,7 +35,6 @@ public class AddCouserAct  extends BaseActivity {
     protected void initVariables() {
         manager = getSupportFragmentManager();
         courseInfoEditFragment = new CourseInfoEditFragment();
-        setSwipeBackEnable(false);
     }
 
     @Override
@@ -46,7 +45,7 @@ public class AddCouserAct  extends BaseActivity {
         showBackButton();
 
         FragmentTransaction fragmentTransaction = manager.beginTransaction();
-        fragmentTransaction.add(R.id.eidtinfo_fragment,courseInfoEditFragment);
+        fragmentTransaction.add(R.id.left_fragment,courseInfoEditFragment);
         fragmentTransaction.commitNowAllowingStateLoss();
     }
 

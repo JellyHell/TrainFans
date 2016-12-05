@@ -98,11 +98,11 @@ public class StudentPaybackMoneyListAct  extends BaseActivity implements Observe
         if(mPage == 1){
             mPaybackMoneyList.clear();
         }
-        mPaybackMoneyList.addAll(articleList.result);
+        mPaybackMoneyList.addAll(articleList.borrowList);
 
         setApapter();
 
-        if (articleList.result.size() < 10)
+        if (articleList.borrowList.size() < 10)
             mAdapter.canLoadMore(false);
         else
             mAdapter.canLoadMore(true);

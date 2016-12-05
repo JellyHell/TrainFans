@@ -9,4 +9,9 @@
     <string name="money_lable">¥</string>
 
 
+    <string name="scan_more">右拉加载上一周</string>
+    <string name="release_scan_more">释放加载</string>
+    <string name="load_more">左拉加载下一周</string>
+
+
 </resources>

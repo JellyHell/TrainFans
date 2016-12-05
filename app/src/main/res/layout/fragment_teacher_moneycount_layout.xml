@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_all">
+
+
+    <LinearLayout
+        android:id="@+id/rlv_header_tipview"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal"
+        android:layout_height="66dp">
+
+        <RelativeLayout
+            android:layout_width="0.0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_teach_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="250.50"
+                android:textSize="16sp"
+                android:textColor="@color/base_gray"
+                android:layout_centerHorizontal="true"/>
+
+
+            <TextView
+                android:id="@+id/tv_teach_count_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="8月授课时长"
+                android:textSize="14sp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/base_gray"
+                android:drawableLeft="@drawable/icon_course_cont"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0.0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_attend_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="250"
+                android:textSize="16sp"
+                android:textColor="@color/base_gray"
+                android:layout_centerHorizontal="true"/>
+
+
+            <TextView
+                android:id="@+id/tv_attend_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="8月课节"
+                android:textSize="14sp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/base_gray"
+                android:drawableLeft="@drawable/icon_class_count"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlv_time_accounts"
+            android:layout_width="0.0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_money_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="¥28000"
+                android:textSize="16sp"
+                android:textColor="@color/base_gray"
+                android:layout_centerHorizontal="true"/>
+
+
+            <TextView
+                android:id="@+id/tv_money_count_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="8月课酬"
+                android:textSize="14sp"
+                android:drawablePadding="4dp"
+                android:textColor="@color/base_gray"
+                android:drawableLeft="@drawable/icon_money_count"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/container_layout"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rlv_header_tipview"
+        android:layout_marginBottom="50dp"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+
+    <!--发工资-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_public_select_button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_ffffff"
+            android:text="发工资"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

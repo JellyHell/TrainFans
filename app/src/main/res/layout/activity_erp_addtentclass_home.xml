@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_all">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rlv_header_tipview"
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:background="@color/color_ffffff"
+            android:orientation="horizontal"
+            android:layout_height="66dp">
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_teach_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="250.50"
+                    android:textSize="16sp"
+                    android:textColor="@color/base_gray"
+                    android:layout_centerHorizontal="true"/>
+
+
+                <TextView
+                    android:id="@+id/tv_teach_count_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="本月授课时长"
+                    android:textSize="14sp"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/base_gray"
+                    android:drawableLeft="@drawable/icon_course_cont"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_attend_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="25/30"
+                    android:textSize="16sp"
+                    android:textColor="@color/base_gray"
+                    android:layout_centerHorizontal="true"/>
+
+
+                <TextView
+                    android:id="@+id/tv_attend_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="到课记录"
+                    android:textSize="14sp"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/base_gray"
+                    android:drawableLeft="@drawable/icon_students_count"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlv_time_accounts"
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                
+                <ImageView
+                    android:layout_width="1.5dp"
+                    android:layout_height="66dp"
+                    android:background="@drawable/icon_arrow"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/icon_class_accounts"
+                    android:layout_centerHorizontal="true"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="时长核算"
+                    android:textSize="14sp"
+                    android:textColor="@color/base_gray"
+                    android:drawableRight="@drawable/icon_select_arrow"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/background_for_all"
+            android:layout_alignBottom="@+id/rlv_header_tipview"/>
+
+        <RelativeLayout
+            android:id="@+id/container_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlv_header_tipview">
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

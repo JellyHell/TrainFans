@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_all">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_etv_input"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@+id/rlv_title_layout"
+        android:background="@color/color_ffffff"
+        android:layout_marginTop="10dp">
+
+        <!--输入框-->
+        <EditText
+            android:id="@+id/etv_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rlv_right_view"
+            android:layout_toRightOf="@+id/tv_cell_title"
+            android:background="@android:color/transparent"
+            android:dropDownVerticalOffset="10.0dip"
+            android:dropDownWidth="wrap_content"
+            android:imeOptions="actionNext"
+            android:padding="8.0dip"
+            android:inputType="textMultiLine"
+            android:hint="向我们吐槽发现了什么让您体验下降的内容..."
+            android:textColor="@color/base_gray"
+            android:textColorHint="@color/color_a0a0a0"
+            android:textCursorDrawable="@null"
+            android:textSize="15.0sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/rlv_etv_input"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_public_select_radius_button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:text="提交"
+            android:textColor="@color/color_ffffff"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

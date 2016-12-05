@@ -21,7 +21,15 @@ public abstract class BaseAdapter <T>  extends RecyclerView.Adapter<ViewHolder> 
     }
 
     public interface RecyclerAdapterListener {
-        public void OnLoadMore();
+        void OnLoadMore();
+    }
+
+    public interface RecyclerRefreshAdapterListener {
+        void OnRefreshMore();
+    }
+
+    public interface OnRecyclerViewScroll{
+        void onScroll(int positon);
     }
 
     protected Context mContext;
@@ -31,7 +39,10 @@ public abstract class BaseAdapter <T>  extends RecyclerView.Adapter<ViewHolder> 
     protected View mFooterView;
     private LoadMoreView mLoadMoreView;
     private boolean mCanLoadMore;
+    private boolean mRefreshMore;
     private RecyclerAdapterListener mListener;
+    private RecyclerRefreshAdapterListener mRListener;
+    private OnRecyclerViewScroll mOnRecyclerViewScroll;
     protected AdapterView.OnItemClickListener mItemClickListener;
     private static final int HEADER = 0;
     private static final int ITEM = 1;
@@ -66,6 +77,16 @@ public abstract class BaseAdapter <T>  extends RecyclerView.Adapter<ViewHolder> 
         switch (viewType) {
             case ITEM:
                 onBindContentViewHolder(viewHolder, position - (mHeaderView == null ? 0 : 1));
+
+                if (mOnRecyclerViewScroll!=null){
+                    mOnRecyclerViewScroll.onScroll(position);
+                }
+
+                if(mRefreshMore && this.mRListener!=null && position == 0){
+                    mRefreshMore = false;
+                    mRListener.OnRefreshMore();
+                }
+
                 break;
             case FOOTER:
                 if (mCanLoadMore && mListener != null)
@@ -128,8 +149,20 @@ public abstract class BaseAdapter <T>  extends RecyclerView.Adapter<ViewHolder> 
         mCanLoadMore = canLoadMore;
     }
 
+    public void canRefreshMore(boolean refreshMore) {
+        mRefreshMore = refreshMore;
+    }
+
     public void setLoadMoreListener(RecyclerAdapterListener pListener) {
         mListener = pListener;
+    }
+
+    public void setmOnRecyclerViewScroll(OnRecyclerViewScroll onRecyclerViewScroll) {
+        this.mOnRecyclerViewScroll = onRecyclerViewScroll;
+    }
+
+    public void setRefreshMoreListener(RecyclerRefreshAdapterListener recyclerRefreshAdapterListener){
+        this.mRListener = recyclerRefreshAdapterListener;
     }
 
     public void setOnItemClickListener(AdapterView.OnItemClickListener pClickListener) {

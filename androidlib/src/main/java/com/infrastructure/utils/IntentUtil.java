@@ -12,4 +12,7 @@ public class IntentUtil {
         Intent aIntent = new Intent(context, cls);
         context.startActivity(aIntent);
     }
+
+
 }
+

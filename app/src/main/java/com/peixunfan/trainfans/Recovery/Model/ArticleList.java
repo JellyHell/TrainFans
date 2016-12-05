@@ -7,5 +7,5 @@ import java.util.ArrayList;
  */
 
 public class ArticleList {
-    public ArrayList<Article> result = new ArrayList<>();
+    public ArrayList<Article> borrowList = new ArrayList<>();
 }

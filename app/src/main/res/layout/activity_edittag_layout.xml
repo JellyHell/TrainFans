@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_all">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_top_editlayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/rlv_title_layout"
+        android:background="@color/color_ffffff">
+
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_editview_drawable"
+            android:dropDownVerticalOffset="10.0dip"
+            android:dropDownWidth="wrap_content"
+            android:imeOptions="actionNext"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8.0dip"
+            android:singleLine="true"
+            android:hint="请输入标签"
+            android:layout_toLeftOf="@+id/bt_edit"
+            android:textColor="@color/base_gray"
+            android:textColorHint="@color/color_a0a0a0"
+            android:textCursorDrawable="@null"
+            android:textSize="15.0sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/bt_edit"
+            android:layout_width="60dp"
+            android:background="@drawable/bg_editbt_drawable"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerVertical="true"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_ffffff"
+                android:text="添加"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llv_taglayout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/color_ffffff"
+        android:layout_below="@+id/rlv_top_editlayout"
+        android:layout_height="wrap_content">
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/llv_taglayout"
+        android:id="@+id/rlv_recommend_tag_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:text="推荐标签"
+            android:textColor="@color/base_gray"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_eidt_recommand"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_edit"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llv_taglayout_recommand"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/color_ffffff"
+        android:layout_below="@+id/rlv_recommend_tag_title"
+        android:layout_height="wrap_content">
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

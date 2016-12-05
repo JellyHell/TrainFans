@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlv_parentview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_all">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+
+    <include
+        android:id="@+id/rlv_company_info"
+        android:layout_width="match_parent"
+        android:layout_height="150.0dip"
+        android:layout_below="@+id/rlv_title_layout"
+        layout="@layout/view_institution_info_header"/>
+
+
+    <RelativeLayout
+        android:id="@+id/tab_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rlv_company_info"
+        android:layout_height="70dp"
+        android:visibility="gone">
+
+        <com.infrastructure.ui.SimpleViewPagerIndicator.SimpleViewPagerIndicator
+            android:id="@id/id_stickynavlayout_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="#ffffffff" />
+
+        <LinearLayout
+            android:id="@+id/horital_devider"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/rlv_icon_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/iv_icon_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/icon_current_tag"/>
+
+                <ImageView
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/background_for_all" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlv_icon_center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/iv_icon_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"
+                    android:background="@drawable/icon_current_tag"/>
+
+                <ImageView
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/background_for_all" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlv_icon_right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/iv_icon_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"
+                    android:background="@drawable/icon_current_tag"/>
+
+                <ImageView
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/background_for_all" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/background_for_all" />
+
+    </RelativeLayout>
+
+    <com.peixunfan.trainfans.Widgt.CanForbitScrollViewPager
+        android:id="@id/id_stickynavlayout_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_bar_layout"
+        android:background="@drawable/background_for_all" />
+
+
+</RelativeLayout>

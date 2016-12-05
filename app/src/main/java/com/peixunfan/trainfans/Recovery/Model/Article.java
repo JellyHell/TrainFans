@@ -5,5 +5,5 @@ package com.peixunfan.trainfans.Recovery.Model;
  */
 
 public class Article {
-    public String smallIcon;
+    public String smallIcon = "http://static.htxq.net/UploadFiles/2016/11/30/20161130151749297124.jpg";
 }

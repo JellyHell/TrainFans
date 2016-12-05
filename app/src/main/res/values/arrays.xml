@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--登陆-->
+    <string-array name="select_photo">
+        <item>拍照</item>
+        <item>相册</item>
+        <item>取消</item>
+    </string-array>
+
+
+    <!--申请账号<企业版>-->
+    <string-array name="apply_company_account_baseinfo">
+        <item>企业名称</item>
+        <item>工作邮箱</item>
+        <item>电话</item>
+        <item>教务人员数量</item>
+        <item>教师数量</item>
+        <item>学生数量</item>
+    </string-array>
+
+    <!--申请账号<工作室版>-->
+    <string-array name="apply_workroom_account_baseinfo">
+        <item>工作室名称</item>
+        <item>工作邮箱</item>
+        <item>电话</item>
+        <item>教务人员数量</item>
+        <item>教师数量</item>
+        <item>学生数量</item>
+    </string-array>
+
     <!-- 首页－－类别 -->
     <string-array name="erp_home_type">
         <item>报名</item>
@@ -21,10 +49,12 @@
     <string-array name="user_center_type">
         <item>扫一扫</item>
         <item>收款码</item>
-        <item>帮助</item>
+        <item>客服</item>
         <item>设置</item>
     </string-array>
 
+
+    <!--////////////////////////////////报名\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
     <!--报名-学生信息-->
     <string-array name="signup_studentinfo">
         <item>学生姓名</item>
@@ -49,6 +79,27 @@
         <item>备注</item>
     </string-array>
 
+    <!--报名-购买课程-->
+    <string-array name="signup_buyclass_baseinfo">
+        <item>课程名称</item>
+        <item>收费方式</item>
+        <item>授课老师</item>
+    </string-array>
+
+    <string-array name="signup_buyclass_byclass">
+        <item>课节单价</item>
+        <item>单节时长/分</item>
+        <item>购买课节</item>
+        <item>课程金额</item>
+    </string-array>
+
+    <string-array name="signup_buyclass_byterm">
+        <item>每期课节</item>
+        <item>单节时长/分</item>
+        <item>课程金额</item>
+    </string-array>
+
+    <!--////////////////////////////////课程\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
     <!--课程-基本信息-->
     <string-array name="course_base_info">
         <item>课程名称</item>
@@ -72,6 +123,67 @@
     <!--课程-一对多情况下-未到情况处理-->
     <string-array name="course_class_nocome_type">
         <item>未到学生标记补课</item>
+    </string-array>
+
+
+    <!--////////////////////////////////班级\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--班级-基本信息-->
+    <string-array name="class_base_info">
+        <item>课程名称</item>
+        <item>班级名称</item>
+        <item>收费方式</item>
+        <item>开班时间</item>
+    </string-array>
+
+    <!--班级-点名-->
+    <string-array name="class_roll_call">
+        <item>授课老师</item>
+        <item>授课时间</item>
+        <item>授课时长/分</item>
+    </string-array>
+
+
+
+    <!--////////////////////////////////教师\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--班级-基本信息-->
+    <string-array name="teacher_base_info">
+        <item>姓名</item>
+        <item>性别</item>
+        <item>擅长科目</item>
+        <item>手机号</item>
+    </string-array>
+
+
+    <!--////////////////////////////////发工资\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--班级信息-->
+    <string-array name="pay_class_info">
+        <item>课程信息</item>
+        <item>收费方式</item>
+        <item>授课时间</item>
+        <item>课节单价</item>
+        <item>授课老师</item>
+        <item>分成方式</item>
+        <item>授课时长／分</item>
+        <item>上课情况</item>
+        <item>课酬金额</item>
+    </string-array>
+
+
+    <!--////////////////////////////////设置\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--设置\-->
+    <string-array name="setting_titles">
+        <item>通知管理</item>
+        <item>登录密码</item>
+        <item>关于我们</item>
+        <item>意见反馈</item>
+    </string-array>
+
+    <!--通知设置\-->
+    <string-array name="notification_setting_titles">
+        <item>发送上课提醒</item>
+        <item>发送点名提醒</item>
+        <item>修改上课时长通知</item>
+        <item>非排班学员提醒</item>
     </string-array>
 
 

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_all">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/rlv_title_layout"
+        android:background="@color/color_ffffff"
+        android:layout_marginTop="5dp"
+        android:id="@+id/rlv_photo">
+
+        <ImageView
+            android:id="@+id/iv_photo_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/icon_upload_img"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_photo_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iv_photo_default"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_a0a0a0"
+            android:text="点击上传照片"/>
+
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rlv_photo"
+        android:background="@color/color_ffffff">
+
+        <!--输入框1-->
+        <EditText
+            android:id="@+id/et_input1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:dropDownVerticalOffset="10.0dip"
+            android:dropDownWidth="wrap_content"
+            android:imeOptions="actionNext"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:singleLine="true"
+            android:hint="机构名称"
+            android:inputType="number"
+            android:textColor="@color/base_gray"
+            android:textColorHint="@color/color_a0a0a0"
+            android:textCursorDrawable="@null"
+            android:textSize="15.0sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="18dp"
+            android:layout_alignBottom="@+id/et_input1"
+            android:background="@drawable/background_for_all"/>
+
+        <!--输入框2-->
+        <EditText
+            android:id="@+id/et_input2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:dropDownVerticalOffset="10.0dip"
+            android:dropDownWidth="wrap_content"
+            android:imeOptions="actionNext"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:singleLine="true"
+            android:hint="联系电话"
+            android:layout_below="@+id/et_input1"
+            android:inputType="number"
+            android:textColor="@color/base_gray"
+            android:textColorHint="@color/color_a0a0a0"
+            android:textCursorDrawable="@null"
+            android:textSize="15.0sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="18dp"
+            android:layout_alignBottom="@+id/et_input2"
+            android:background="@drawable/background_for_all"/>
+
+        <!--输入框2-->
+        <EditText
+            android:id="@+id/et_input3"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:dropDownVerticalOffset="10.0dip"
+            android:dropDownWidth="wrap_content"
+            android:imeOptions="actionNext"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:layout_below="@+id/et_input2"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:singleLine="true"
+            android:hint="详细地址"
+            android:inputType="number"
+            android:textColor="@color/base_gray"
+            android:textColorHint="@color/color_a0a0a0"
+            android:textCursorDrawable="@null"
+            android:textSize="15.0sp" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

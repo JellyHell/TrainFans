@@ -14,7 +14,6 @@
         android:id="@+id/rlv_complete_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="48dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/bg_public_select_button">
 

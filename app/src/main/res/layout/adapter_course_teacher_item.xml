@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/icon_man_teacher"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="11dp"/>
 
         <TextView
             android:id="@+id/tv_teacher_name"
@@ -52,6 +52,18 @@
             android:layout_marginBottom="11dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_teacher_class"
+            android:textColor="@color/base_gray"
+            android:textSize="15sp"
+            android:text="20.0课时"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="28dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
 
         <ImageView
             android:id="@+id/right_iv_arrow"

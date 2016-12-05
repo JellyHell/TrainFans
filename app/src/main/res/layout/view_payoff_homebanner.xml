@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/bg_homebanner">
+
+    <RelativeLayout
+        android:id="@+id/top_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/tv_count_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_ffffff"
+            android:textSize="14sp"
+            android:text="8月课酬(8.1-8.31)"/>
+
+
+        <TextView
+            android:id="@+id/tv_payoff_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/color_ffffff"
+            android:textSize="14sp"
+            android:text="发薪日:9.15"/>
+
+    </RelativeLayout>
+
+    <!--Money Title-->
+    <TextView
+        android:id="@+id/tv_money_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textSize="14sp"
+        android:textColor="@color/color_def3eb"
+        android:text="待发课酬(元)"/>
+
+    <TextView
+        android:id="@+id/tv_money_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_money_title"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_ffffff"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:layout_height="42dp">
+
+        <!--本月实收-->
+        <RelativeLayout
+            android:id="@+id/left_income_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/left_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_ffffff"
+                android:text="0.00"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/left_income_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/gray_on_blue"
+                android:text="8月课酬(元)"
+                android:layout_below="@+id/left_income"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"/>
+
+        </RelativeLayout>
+
+        <!--课消金融-->
+        <RelativeLayout
+            android:id="@+id/center_income_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/center_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_ffffff"
+                android:text="100"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/center_income_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/gray_on_blue"
+                android:text="8月授课时长"
+                android:layout_below="@+id/center_income"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

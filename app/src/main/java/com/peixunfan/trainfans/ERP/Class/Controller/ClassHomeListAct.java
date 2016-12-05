@@ -2,15 +2,15 @@ package com.peixunfan.trainfans.ERP.Class.Controller;
 
 import android.os.Bundle;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.infrastructure.net.RetrofitSingleton;
 import com.infrastructure.utils.IntentUtil;
 import com.peixunfan.trainfans.Api.ApiProvider;
 import com.peixunfan.trainfans.Base.BaseActivity;
 import com.peixunfan.trainfans.Base.BaseBlankHeaderView;
+import com.peixunfan.trainfans.ERP.Class.View.ClassAdapter;
 import com.peixunfan.trainfans.ERP.Courses.Controller.AddCouserAct;
-import com.peixunfan.trainfans.ERP.Courses.Controller.EditCourseAct;
-import com.peixunfan.trainfans.ERP.Courses.View.CourseHomeAdapter;
 import com.peixunfan.trainfans.R;
 import com.peixunfan.trainfans.Recovery.Model.Article;
 import com.peixunfan.trainfans.Recovery.Model.ArticleList;
@@ -31,14 +31,20 @@ public class ClassHomeListAct  extends BaseActivity implements Observer<ArticleL
     @Bind(R.id.container_layout)
     RelativeLayout mContainer;
 
+    @Bind(R.id.rlv_header_tipview)
+    RelativeLayout mHeaderTipView;
+
+    @Bind(R.id.tv_error_tip_text)
+    TextView mErrorTip;
+
     RefreshableRecyclerView mRefreshableRecyclerView;
 
-    CourseHomeAdapter mAdapter;
-    ArrayList<Article> mCoursesList = new ArrayList();
+    ClassAdapter mAdapter;
+    ArrayList<Article> mClassesList = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_erp_message_home);
+        setContentView(R.layout.activity_erp_studentlist_home);
         ButterKnife.bind(this);
         super.onCreate(savedInstanceState);
     }
@@ -50,7 +56,7 @@ public class ClassHomeListAct  extends BaseActivity implements Observer<ArticleL
     @Override
     protected void initViews(Bundle saveInstanceState) {
         super.initViews(saveInstanceState);
-        mCenterTitle.setText("课程列表");
+        mCenterTitle.setText("全部班级");
         mRightManagerBt.setImageResource(R.drawable.icon_search_bt);
         mRightSecondManagerBt.setImageResource(R.drawable.icon_add_more);
         showBackButton();
@@ -73,6 +79,8 @@ public class ClassHomeListAct  extends BaseActivity implements Observer<ArticleL
 
         //设置自动刷新
         mRefreshableRecyclerView.autoRefresh();
+
+        mErrorTip.setText("共有3个班级未排授课时间，请尽快安排时间。");
     }
 
     @Override
@@ -99,13 +107,13 @@ public class ClassHomeListAct  extends BaseActivity implements Observer<ArticleL
     @Override
     public void onNext(ArticleList articleList) {
         if(mPage == 1){
-            mCoursesList.clear();
+            mClassesList.clear();
         }
-        mCoursesList.addAll(articleList.result);
+        mClassesList.addAll(articleList.borrowList);
 
         setApapter();
 
-        if (articleList.result.size() < 10)
+        if (articleList.borrowList.size() < 10)
             mAdapter.canLoadMore(false);
         else
             mAdapter.canLoadMore(true);
@@ -114,8 +122,8 @@ public class ClassHomeListAct  extends BaseActivity implements Observer<ArticleL
 
     private void setApapter(){
         if(mAdapter == null){
-            mAdapter = new CourseHomeAdapter(this,mCoursesList);
-            mAdapter.setOnItemClickListener((adapterView, view, i, l) -> IntentUtil.forwordToActivity(ClassHomeListAct.this,EditCourseAct.class));
+            mAdapter = new ClassAdapter(this,mClassesList);
+            mAdapter.setOnItemClickListener((adapterView, view, i, l) -> IntentUtil.forwordToActivity(ClassHomeListAct.this,EditClassAct.class));
             mAdapter.setLoadMoreListener(() -> {
                 mPage++;
                 loadData();
@@ -144,6 +152,6 @@ public class ClassHomeListAct  extends BaseActivity implements Observer<ArticleL
     @Override
     protected void onRightSecondManagerBtClick() {
         super.onRightSecondManagerBtClick();
-        IntentUtil.forwordToActivity(this,AddCouserAct.class);
+        IntentUtil.forwordToActivity(this,AddClassAct.class);
     }
 }

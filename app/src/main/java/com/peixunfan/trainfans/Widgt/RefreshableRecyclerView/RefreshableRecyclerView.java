@@ -18,6 +18,8 @@ import com.infrastructure.utils.AppUtil;
 import com.infrastructure.utils.StringUtil;
 import com.peixunfan.trainfans.Base.BaseAdapter;
 import com.peixunfan.trainfans.Base.BaseSwipMenuAdapter;
+import com.peixunfan.trainfans.Base.SectionedRecyclerViewAdapter;
+import com.peixunfan.trainfans.ERP.IntentStudent.View.IntentStudentAdapter;
 import com.peixunfan.trainfans.R;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView;
 
@@ -95,7 +97,23 @@ public class RefreshableRecyclerView {
         mRecyclerview.setAdapter(animationAdapter);
     }
 
+    public void setAdapter(SectionedRecyclerViewAdapter adapter)
+    {
+        mRecyclerview.setAdapter(adapter);
+    }
+
     public void setAdapter(BaseSwipMenuAdapter adapter)
+    {
+        adapter.setLoadMoreListener(()->{
+            if (mRefreshCallback != null)
+            {
+                mRefreshCallback.loadMore();
+            }
+        });
+        mRecyclerview.setAdapter(adapter);
+    }
+
+    public void setAdapter(IntentStudentAdapter adapter)
     {
         adapter.setLoadMoreListener(()->{
             if (mRefreshCallback != null)
@@ -151,22 +169,16 @@ public class RefreshableRecyclerView {
     public void setBannerView(){
         mBannerView.setVisibility(View.VISIBLE);
 
-        mLeftImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(mOnHomeBanerTitleMenuClick != null){
-                    mLeftImg.setVisibility(View.GONE);
-                    mOnHomeBanerTitleMenuClick.onLeftMenuBtClick();
-                }
+        mLeftImg.setOnClickListener(view -> {
+            if(mOnHomeBanerTitleMenuClick != null){
+                mLeftImg.setVisibility(View.GONE);
+                mOnHomeBanerTitleMenuClick.onLeftMenuBtClick();
             }
         });
 
-        mRightImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(mOnHomeBanerTitleMenuClick != null){
-                    mOnHomeBanerTitleMenuClick.onRightMenuBtClick();
-                }
+        mRightImg.setOnClickListener(view -> {
+            if(mOnHomeBanerTitleMenuClick != null){
+                mOnHomeBanerTitleMenuClick.onRightMenuBtClick();
             }
         });
     }

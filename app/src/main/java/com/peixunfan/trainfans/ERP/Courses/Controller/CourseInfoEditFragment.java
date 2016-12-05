@@ -13,6 +13,7 @@ import com.peixunfan.trainfans.ERP.Courses.View.CouserAddRemarkFooterView;
 import com.peixunfan.trainfans.ERP.Courses.View.CouserInfoAdapter;
 import com.peixunfan.trainfans.R;
 import com.peixunfan.trainfans.Widgt.popupwindow.PublicMenuSelectPW;
+import com.peixunfan.trainfans.Widgt.popupwindow.PublicMenuSelectPopWindow;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView;
 
 import java.util.ArrayList;
@@ -137,18 +138,18 @@ public class CourseInfoEditFragment  extends BaseFragment{
             mAdapter.setOnItemClickListener((adapterView, view, i, l) -> {
                 switch (i){
                     case 2:
-                        new PublicMenuSelectPW(getActivity(), mTeachTypes, mCurrentTeachTypes, (adapterView12, view12, i12, l12) -> {
+                        new PublicMenuSelectPopWindow(getActivity(),mRecyclerview, mTeachTypes, mCurrentTeachTypes, (adapterView12, view12, i12, l12) -> {
                             mCurrentTeachTypes = mTeachTypes.get(i12);
                             filterAdapterData();
                             mAdapter.notifyDataSetChanged();
-                        }).show(mRecyclerview);
+                        }).show();
                         break;
                     case 4:
-                        new PublicMenuSelectPW(getActivity(), mChargeTypes, mCurrentChargeTypes, (adapterView1, view1, i1, l1) -> {
+                        new PublicMenuSelectPopWindow(getActivity(),mRecyclerview, mChargeTypes, mCurrentChargeTypes, (adapterView1, view1, i1, l1) -> {
                             mCurrentChargeTypes = mChargeTypes.get(i1);
                             filterAdapterData();
                             mAdapter.notifyDataSetChanged();
-                        }).show(mRecyclerview);
+                        }).show();
                         break;
                 }
             });

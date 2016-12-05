@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.infrastructure.ui.progressHudView.ProgressHUD;
+import com.infrastructure.utils.TextUtil;
 import com.peixunfan.trainfans.R;
 
 import butterknife.Bind;
@@ -59,6 +60,22 @@ public abstract class BaseActivity extends SwipeBackActivity {
 
     @Bind(R.id.tv_cancle_bt)
     protected TextView mCancleBt;
+
+    /****************Segment UI*****************/
+    @Bind(R.id.rlv_segment_layout)
+    protected RelativeLayout mSegmentLayout;
+
+    @Bind(R.id.rlv_segment_left)
+    protected RelativeLayout mSegmentLeftLayout;
+
+    @Bind(R.id.rlv_segment_right)
+    protected RelativeLayout mSegmentRightLayout;
+
+    @Bind(R.id.tv_segment_left)
+    protected TextView mSegmentLeftTitle;
+
+    @Bind(R.id.tv_segment_right)
+    protected TextView mSegmentRightTitle;
 
     /****************Public Data*****************/
     protected ProgressHUD mProgressHUD;
@@ -145,7 +162,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
     /****************NavgationBar处理*****************/
     protected void showBackButton(){
         mTitleBackIv.setVisibility(View.VISIBLE);
-        mTitleBackIv.setOnClickListener(view -> this.finish());
+        mTitleBackIv.setOnClickListener(view -> onLeftManagerBtClick());
     }
 
     /**
@@ -165,9 +182,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
     /**
      * 开始搜索
      * */
-    protected void startSearch(String searchKey){
-
-    }
+    protected void startSearch(String searchKey){}
 
     /**
      * 取消搜索
@@ -177,17 +192,46 @@ public abstract class BaseActivity extends SwipeBackActivity {
     }
 
     protected void setRightManagerTv(String rightManagerTv){
+        if (TextUtil.isEmpty(rightManagerTv)){
+            mRightManagerTv.setVisibility(View.GONE);
+            return;
+        }
         mRightManagerTv.setVisibility(View.VISIBLE);
         mRightManagerTv.setText(rightManagerTv);
         mRightManagerTv.setOnClickListener(view -> onRightManagerBtClick());
     }
 
-    protected void onRightManagerBtClick(){
+    protected void onRightManagerBtClick(){}
 
+    protected void onLeftManagerBtClick(){
+        finish();
     }
 
-    protected void onRightSecondManagerBtClick(){
+    protected void onRightSecondManagerBtClick(){}
 
+
+    protected void showSegmentControl(String leftTitle,String rightTitle){
+        mSegmentLayout.setVisibility(View.VISIBLE);
+        mSegmentLeftTitle.setText(leftTitle);
+        mSegmentRightTitle.setText(rightTitle);
+        mSegmentLeftLayout.setOnClickListener(v -> onSegmentLeftClick());
+        mSegmentRightLayout.setOnClickListener(v -> onSegmentRightClick());
+    }
+
+    protected void onSegmentLeftClick(){
+        mSegmentLeftLayout.setBackgroundResource(R.drawable.bg_segment_left_normal);
+        mSegmentLeftTitle.setTextColor(getResources().getColor(R.color.main_color));
+
+        mSegmentRightLayout.setBackgroundResource(R.drawable.bg_segment_right_selected);
+        mSegmentRightTitle.setTextColor(getResources().getColor(R.color.color_ffffff));
+    }
+
+    protected void onSegmentRightClick(){
+        mSegmentLeftLayout.setBackgroundResource(R.drawable.bg_segment_left_selected);
+        mSegmentLeftTitle.setTextColor(getResources().getColor(R.color.color_ffffff));
+
+        mSegmentRightLayout.setBackgroundResource(R.drawable.bg_segment_right_normal);
+        mSegmentRightTitle.setTextColor(getResources().getColor(R.color.main_color));
     }
 
     /****************隐藏软键盘*****************/

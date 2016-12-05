@@ -24,6 +24,8 @@ public class PublicContentViewHolder  extends RecyclerView.ViewHolder {
     public TextView selectStudentBt;
     /**输入框*/
     public EditText inputText;
+    /**右侧文本*/
+    public TextView content;
     /**分割线*/
     public View line;
 
@@ -49,6 +51,8 @@ public class PublicContentViewHolder  extends RecyclerView.ViewHolder {
         arrowImg = (ImageView) itemView.findViewById(R.id.iv_arrow);
         selectStudentBt = (TextView) itemView.findViewById(R.id.iv_student_list);
         inputText = (EditText) itemView.findViewById(R.id.etv_input);
+        content = (TextView) itemView.findViewById(R.id.tv_right_content);
+
 
         mClassInfoLayout = (RelativeLayout) itemView.findViewById(R.id.rlv_class_info);
         mClassTypeImage = (ImageView) itemView.findViewById(R.id.iv_class_type);

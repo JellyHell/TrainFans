@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:layout_marginBottom="0.5dp"
+    android:layout_marginLeft="0.4dp"
+    android:layout_marginRight="0.4dp">
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_select_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_student_selected">
+
+        <RelativeLayout
+            android:id="@+id/rlv_info_layout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_round_drawable"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tv_student_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_ffffff"
+                android:textSize="14sp"
+                android:text="张三"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_cell_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/base_gray"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/rlv_info_layout"
+            android:text="张三"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

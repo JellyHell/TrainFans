@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_for_all">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+    <RelativeLayout
+        android:id="@+id/top_money_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlv_title_layout">
+
+        <!--Banner-->
+        <include
+            android:id="@+id/rlv_banner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="170.0dip"
+            layout="@layout/view_smsinfo_bannerview" />
+
+        <RelativeLayout
+            android:id="@+id/rlv_smsfunction_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/color_ffffff"
+            android:layout_below="@+id/rlv_banner_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/base_gray"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/left_icon"
+                android:layout_marginLeft="12dp"
+                android:text="短信用途"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/background_for_all"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlv_smsfunction_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/color_ffffff"
+            android:layout_below="@+id/rlv_smsfunction_title">
+
+
+            <RelativeLayout
+                android:id="@+id/line1"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+                <View
+                    android:id="@+id/dolt1"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_maincolor_dolt"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/dolt1"
+                    android:layout_centerVertical="true"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/color_a0a0a0"
+                    android:text="签到通知"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line2"
+                android:layout_below="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+                <View
+                    android:id="@+id/dolt2"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_maincolor_dolt"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/dolt2"
+                    android:layout_centerVertical="true"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/color_a0a0a0"
+                    android:text="上课提醒、时间修改提醒等"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line3"
+                android:layout_below="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+
+                <View
+                    android:id="@+id/dolt3"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_maincolor_dolt"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/dolt3"
+                    android:layout_centerVertical="true"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/color_a0a0a0"
+                    android:text="学员调班、退课提醒等"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/rlv_smsfunction_layout"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_a0a0a0"
+            android:text="短信由机构所有人员共同使用、不消耗个人短信流量"/>
+
+    </RelativeLayout>
+
+
+    <!--购买短信(0.05元/条)-->
+    <RelativeLayout
+        android:id="@+id/rlv_buy_sms"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/rlv_share_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_public_select_radius_button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:text="购买短信(0.05元/条)"
+            android:textColor="@color/color_ffffff"/>
+
+    </RelativeLayout>
+
+
+    <!--推荐给机构-->
+    <RelativeLayout
+        android:id="@+id/rlv_share_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_maincolor_border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:text="推荐给机构,免费得短信"
+            android:textColor="@color/main_color"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

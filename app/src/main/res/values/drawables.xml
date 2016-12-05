@@ -8,4 +8,9 @@
     <item name="rank_selected" type="drawable">#7fc3ff</item>
 
     <item name="red_drawable" type="drawable">#fd5a5a</item>
+
+    <item name="dray_background" type="drawable">@color/color_a0a0a0</item>
+
+    <item name="drawable_529ce7" type="drawable">@color/color_529ce7</item>
+
 </resources>

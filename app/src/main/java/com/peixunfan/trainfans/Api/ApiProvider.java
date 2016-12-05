@@ -50,7 +50,7 @@ public class ApiProvider {
     /*************************************具体的网络连接请求****************************************/
     public void getRecommendBorrow(Observer<ArticleList> observer, String page)
     {
-        apiService.mFrontIndexApi(page,"10").compose(RxUtils.rxSchedulerHelper())
+        apiService.mFrontIndexApi(page).compose(RxUtils.rxSchedulerHelper())
                 .doOnError(throwable -> SuperToast.show("请求失败",mContext))
                 .subscribe(observer);
     }

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_for_all">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_base_title" />
+
+    <RelativeLayout
+        android:id="@+id/top_price_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_ffffff"
+        android:layout_below="@+id/rlv_title_layout">
+
+        <TextView
+            android:id="@+id/tv_tip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:textColor="@color/color_7a7a81"
+            android:text="每条短信0.05元，比普通短信便宜50%!"/>
+
+
+        <LinearLayout
+            android:id="@+id/llv_price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="18dp"
+            android:layout_below="@+id/tv_tip_text">
+
+
+            <RelativeLayout
+                android:id="@+id/rlv_one_price"
+                android:layout_width="0.0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rlv_one_price_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/bg_price_border_maincolor">
+
+                    <TextView
+                        android:id="@+id/tv_one_price_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000条"
+                        android:textSize="15sp"
+                        android:textColor="@color/main_color"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:text="适合50人以下"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_7a7a81"
+                    android:alpha="0.5"
+                    android:layout_below="@+id/rlv_one_price_content"/>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rlv_two_price"
+                android:layout_width="0.0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rlv_two_price_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/bg_price_border_color_eeeeee">
+
+                    <TextView
+                        android:id="@+id/tv_two_price_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2000条"
+                        android:textSize="15sp"
+                        android:textColor="@color/color_7a7a81"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:text="适合80人以下"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_7a7a81"
+                    android:alpha="0.5"
+                    android:layout_below="@+id/rlv_two_price_content"/>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlv_five_price"
+                android:layout_width="0.0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rlv_five_price_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/bg_price_border_color_eeeeee">
+
+                    <TextView
+                        android:id="@+id/tv_five_price_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5000条"
+                        android:textSize="15sp"
+                        android:textColor="@color/color_7a7a81"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:text="适合150人以下"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_7a7a81"
+                    android:alpha="0.5"
+                    android:layout_below="@+id/rlv_five_price_content"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--短信数量-->
+    <RelativeLayout
+        android:id="@+id/rlv_sms_count"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_ffffff"
+        android:layout_below="@+id/top_price_layout">
+
+        <TextView
+            android:id="@+id/tv_sms_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/base_gray"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:text="1000"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/background_for_all"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"/>
+
+    </RelativeLayout>
+
+    <!--价格及支付-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_ffffff"
+        android:layout_below="@+id/rlv_sms_count">
+
+        <ImageView
+            android:id="@+id/icon_zfb"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_zfb"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:text="50"
+            android:textSize="15sp"
+            android:textColor="@color/main_color"/>
+
+
+    </RelativeLayout>
+
+
+    <!--立即购买-->
+    <RelativeLayout
+        android:id="@+id/rlv_buy_sms"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_public_select_radius_button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:text="立即购买"
+            android:textColor="@color/color_ffffff"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

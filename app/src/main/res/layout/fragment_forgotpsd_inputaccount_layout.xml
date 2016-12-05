@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlv_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_ffffff">
+
+        <!--输入框-->
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:dropDownVerticalOffset="10.0dip"
+            android:dropDownWidth="wrap_content"
+            android:imeOptions="actionNext"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:singleLine="true"
+            android:hint="账号"
+            android:inputType="number"
+            android:textColor="@color/base_gray"
+            android:textColorHint="@color/color_a0a0a0"
+            android:textCursorDrawable="@null"
+            android:textSize="15.0sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_send_msm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/rlv_input_layout"
+        android:background="@drawable/bg_public_select_button">
+
+        <!--输入框-->
+        <TextView
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp"
+            android:text="发送验证码"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

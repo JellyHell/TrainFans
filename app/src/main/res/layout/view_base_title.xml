@@ -78,6 +78,52 @@
             android:visibility="gone"
             android:textColor="@color/color_ffffff"
             android:textSize="18.0sp"/>
+        
+        
+        <RelativeLayout
+            android:id="@+id/rlv_segment_layout"
+            android:layout_width="144dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:layout_height="27dp">
+
+            <RelativeLayout
+                android:id="@+id/rlv_segment_left"
+                android:layout_width="wrap_content"
+                android:background="@drawable/bg_segment_left_normal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_segment_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlv_segment_right"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/rlv_segment_left"
+                android:background="@drawable/bg_segment_right_selected"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_segment_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        
+        
     </RelativeLayout>
 
     <!--搜索-->

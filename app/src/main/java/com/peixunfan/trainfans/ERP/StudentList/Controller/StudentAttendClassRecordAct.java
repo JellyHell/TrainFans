@@ -99,11 +99,11 @@ public class StudentAttendClassRecordAct extends BaseActivity implements Observe
         if(mPage == 1){
             mAttendClassList.clear();
         }
-        mAttendClassList.addAll(articleList.result);
+        mAttendClassList.addAll(articleList.borrowList);
 
         setApapter();
 
-        if (articleList.result.size() < 10)
+        if (articleList.borrowList.size() < 10)
             mAdapter.canLoadMore(false);
         else
             mAdapter.canLoadMore(true);

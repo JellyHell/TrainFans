@@ -128,11 +128,11 @@ public class StudentBuyClassFragment  extends BaseFragment implements Observer<A
         if(mPage == 1){
             mArticleList.clear();
         }
-        mArticleList.addAll(articleList.result);
+        mArticleList.addAll(articleList.borrowList);
 
         setApapter();
 
-        if (articleList.result.size() < 10)
+        if (articleList.borrowList.size() < 10)
             mAdapter.canLoadMore(false);
         else
             mAdapter.canLoadMore(true);

@@ -2,6 +2,7 @@ package com.infrastructure.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Rect;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.WindowManager;
@@ -40,5 +41,13 @@ public class AppUtil {
         lp.alpha = bgAlpha;
         context.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         context.getWindow().setAttributes(lp);
+    }
+
+
+    public static int getStatusBarHeight(Context content){
+        Rect outRect = new Rect();
+        ((Activity)content).getWindow().getDecorView().getWindowVisibleDisplayFrame(outRect);
+        return  outRect.top;
+
     }
 }

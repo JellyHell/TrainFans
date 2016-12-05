@@ -21,8 +21,15 @@
     <!--写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_LOGS" />
-    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
+    <!--调用相机-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--调用闪光灯-->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="23"/>
 
     <application
         android:name=".Application.App"
@@ -33,6 +40,7 @@
         android:largeHeap="true"
         android:supportsRtl="true">
 
+        <!--1.启动页-->
         <activity
             android:name="com.peixunfan.trainfans.Base.LaunchActivity"
             android:theme="@style/Theme.start">
@@ -43,80 +51,353 @@
         </activity>
 
 
-        <!-- 主页 -->
+        <!--2.基础Webview页面-->
+        <activity
+            android:name="com.peixunfan.trainfans.Base.SimpleOutLinkAct"
+            android:theme="@style/SecondeActTheme"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--3.登陆-->
+        <activity
+            android:name="com.peixunfan.trainfans.Login.Controller.LoginAct"
+            android:theme="@style/Login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--4.忘记密码-->
+        <activity
+            android:name="com.peixunfan.trainfans.Login.Controller.ForgotPsdAct"
+            android:theme="@style/SecondeActTheme"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--5.申请信息<个人版>-->
+        <activity
+            android:name="com.peixunfan.trainfans.Login.Controller.ApplyPersonalAct"
+            android:theme="@style/SecondeActTheme"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--6.申请信息<企业版>-->
+        <activity
+            android:name="com.peixunfan.trainfans.Login.Controller.ApplyCompanyAct"
+            android:theme="@style/SecondeActTheme"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--7.申请信息<工作室版>-->
+        <activity
+            android:name="com.peixunfan.trainfans.Login.Controller.ApplyWorkRoomAct"
+            android:theme="@style/SecondeActTheme"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <!-- 8.主页 -->
         <activity
             android:name="com.peixunfan.trainfans.Base.BaseTabActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppBaseTheme" />
 
-        <!--消息首页-->
+        <!--9.消息首页-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.Message.Controller.MessageListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
 
-        <!--报名(填写信息)-->
+        <!--10.报名(填写信息)-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.SignUp.Controller.SignUpAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
 
-        <!--学员(首页)-->
+        <!--11.学员(首页)-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
 
-        <!--学员(详情)-->
+        <!--12.学员(详情)-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentDetailInfoAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
-        <!--学员(上课记录)-->
+        <!--13.学员(上课记录)-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentAttendClassRecordAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
-        <!--学员(学员退费列表)-->
+        <!--14.学员(学员退费列表)-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentPaybackMoneyListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
-        <!--学员(学员退费详情)-->
+        <!--15.学员(学员退费详情)-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.StudentList.Controller.StudentPaybackDetailAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
 
-        <!--课程(课程列表)-->
+        <!--16.课程(课程列表)-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.Courses.Controller.CourseHomeListAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
 
-        <!--课程(编辑课程)-->
+        <!--17.课程(编辑课程)-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.Courses.Controller.EditCourseAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
 
-        <!--课程(添加课程)-->
+        <!--18.课程(添加课程)-->
         <activity
             android:name="com.peixunfan.trainfans.ERP.Courses.Controller.AddCouserAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
 
+        <!--19.班级(班级列表)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.Class.Controller.ClassHomeListAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--20.班级(班级详情)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.Class.Controller.EditClassAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--21.班级(添加班级)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.Class.Controller.AddClassAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--22.老师(老师列表)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.Teacher.Controller.TeacherListAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--23.老师(老师详情)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.Teacher.Controller.TeacherDetailAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--24.老师(添加老师)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.Teacher.Controller.AddTeacherAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--25.上课记录(首页)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.AttendClassRecord.Controller.AttendClassRecordHomeAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--26.上课记录(未到记录)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.AttendClassRecord.Controller.NoAttendStudentListAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+
+        <!--27.发工资(首页)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.PayoffMoney.Controller.PayoffMoneyHomeAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--28.发工资(课酬核算)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.PayoffMoney.Controller.PayoffMoneyCountAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--29.发工资(老师课酬详情)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.PayoffMoney.Controller.TeacherMoneyCountDetailAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--30.发工资(未发课酬列表)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.PayoffMoney.Controller.NoPayedListAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--31.发工资(历史课酬)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.PayoffMoney.Controller.HistoryMoneyAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--32.发工资(课程信息)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.PayoffMoney.Controller.PayCourseDetailAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--33.续费预警(首页)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.RenewWarning.Controller.RenewWarningHomeAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--34.购买课程()-->
+        <activity android:name="com.peixunfan.trainfans.ERP.RenewWarning.Controller.BuyClassAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--35.购买课程(发消息)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.RenewWarning.Controller.SendMsgAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--36.意向学员(首页)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.IntentStudent.Controller.IntentStudentHomeListAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--37.意向学员(添加学员)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.IntentStudent.Controller.AddIntentStudentAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--38.意向学员(学员信息)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.IntentStudent.Controller.IntentStudentDetailAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--39.意向学员(编辑标签)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.IntentStudent.Controller.EditTagAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--40.账单(首页)-->
+        <activity android:name="com.peixunfan.trainfans.ERP.Bill.Controller.BillHomeAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+
+        <!--个人中心-->
+        <!--个人信息首页(首页)-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.UserInfo.Controller.PersonalIofoAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--41.个人信息(修改信息)-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.UserInfo.Controller.SingleChangeUserInfoAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--42.切换机构-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.UserInfo.Controller.ChangeInstitutionAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--43.机构信息-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.InstitutionInfo.Controller.InstitutionInfoAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--44.编辑机构信息-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.InstitutionInfo.Controller.InstitutionEditAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+         <!--45.短信首页-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.InstitutionInfo.Controller.SMSInfoAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+         <!--46.购买短信-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.InstitutionInfo.Controller.BuySmsAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+         <!--47.购买记录-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.InstitutionInfo.Controller.BuySmsRecordAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme" />
+
+        <!--48.扫一扫-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.Setting.Controller.QRCannerAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Login" />
+
+        <!--49.设置-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.Setting.Controller.SettingAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme"  />
+
+        <!--50.通知设置-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.Setting.Controller.NotificationSetting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme"  />
+
+        <!--51.关于我们-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.Setting.Controller.AboutUsAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme"  />
+
+        <!--52.意见反馈-->
+        <activity android:name="com.peixunfan.trainfans.UserCenter.Setting.Controller.FeedbackAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme"  />
+
+        <!--53.群发消息-->
+        <activity android:name="com.peixunfan.trainfans.ERP.RenewWarning.Controller.GroupMessageHomeAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme"  />
+
+        <!--54.课程表-->
+        <activity android:name="com.peixunfan.trainfans.ERP.CourseSchedule.Controller.CourseScheduleAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme"  />
 
         <activity
             android:name="com.peixunfan.trainfans.SecondActivity"
@@ -124,6 +405,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/SecondeActTheme" />
 
+
+
     </application>
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
 
 </manifest>

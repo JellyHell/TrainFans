@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_ffffff"
+    android:layout_height="220dp">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:text="推荐其他机构下载并注册,"
+                android:textColor="@color/base_gray" />
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/title1"
+                android:text="他们将获得200条免费短信，您将获得100条"
+                android:textColor="@color/base_gray" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/background_for_all"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_share_body"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:weightSum="4"
+            android:layout_height="wrap_content">
+
+            <!--微信分享-->
+            <RelativeLayout
+                android:id="@+id/rlv_weixin_share_layout"
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_weixin_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_weixin"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_a0a0a0"
+                    android:textSize="14sp"
+                    android:text="微信"
+                    android:layout_below="@+id/iv_weixin_share"/>
+
+            </RelativeLayout>
+
+            <!--QQ分享-->
+            <RelativeLayout
+                android:id="@+id/rlv_qq_share_layout"
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_qq_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_qq"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_a0a0a0"
+                    android:textSize="14sp"
+                    android:text="QQ"
+                    android:layout_below="@+id/iv_qq_share"/>
+
+            </RelativeLayout>
+
+
+            <!--微博分享-->
+            <RelativeLayout
+                android:id="@+id/rlv_weibo_share_layout"
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_weibo_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_weibo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_a0a0a0"
+                    android:textSize="14sp"
+                    android:text="微博"
+                    android:layout_below="@+id/iv_weibo_share"/>
+
+            </RelativeLayout>
+
+
+            <!--朋友圈分享-->
+            <RelativeLayout
+                android:id="@+id/rlv_friendcycle_share_layout"
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_friendcycle_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_friendcycle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_a0a0a0"
+                    android:textSize="14sp"
+                    android:text="朋友圈"
+                    android:layout_below="@+id/iv_friendcycle_share"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+        android:id="@+id/rlv_cancle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rlv_share_body"
+        android:background="@drawable/background_for_all">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:textColor="@color/color_a0a0a0"
+            android:text="取消"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

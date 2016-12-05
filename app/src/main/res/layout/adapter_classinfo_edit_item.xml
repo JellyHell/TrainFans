@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="12dp"
+                android:layout_marginRight="8dp"
                 android:background="@drawable/icon_select_arrow"
                 android:visibility="gone" />
 
@@ -81,9 +81,10 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/rlv_right_view"
             android:layout_toRightOf="@+id/tv_cell_title"
             android:gravity="right"
+            android:layout_marginRight="30dp"
             android:textColor="@color/base_gray"
             android:textSize="15sp" />
 

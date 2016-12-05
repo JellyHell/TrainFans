@@ -87,6 +87,11 @@ public class EditCourseAct  extends BaseActivity {
             @Override
             public void onPageSelected(int position) {
                 mIndicator.setChildTextSelected(position);
+                if(position == 0){
+                    setSwipeBackEnable(true);
+                }else {
+                    setSwipeBackEnable(false);
+                }
             }
 
             @Override
@@ -95,7 +100,6 @@ public class EditCourseAct  extends BaseActivity {
             }
         });
 
-        setSwipeBackEnable(false);
     }
 
     @Override

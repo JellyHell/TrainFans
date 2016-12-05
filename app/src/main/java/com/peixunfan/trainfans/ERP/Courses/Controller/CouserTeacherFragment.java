@@ -14,7 +14,7 @@ import com.infrastructure.utils.AppUtil;
 import com.peixunfan.trainfans.Api.ApiProvider;
 import com.peixunfan.trainfans.Base.BaseBlankHeaderView;
 import com.peixunfan.trainfans.Base.BaseFragment;
-import com.peixunfan.trainfans.ERP.Courses.View.CourseTeacherAdapter;
+import com.peixunfan.trainfans.ERP.Teacher.View.TeacherAdapter;
 import com.peixunfan.trainfans.R;
 import com.peixunfan.trainfans.Recovery.Model.Article;
 import com.peixunfan.trainfans.Recovery.Model.ArticleList;
@@ -41,7 +41,7 @@ public class CouserTeacherFragment  extends BaseFragment implements Observer<Art
 
     RefreshableRecyclerView mRefreshableRecyclerView;
 
-    CourseTeacherAdapter mAdapter;
+    TeacherAdapter mAdapter;
     ArrayList<Article> mTeacherList = new ArrayList();
 
     /**
@@ -122,7 +122,7 @@ public class CouserTeacherFragment  extends BaseFragment implements Observer<Art
 
     private void setApapter(){
         if(mAdapter == null){
-            mAdapter = new CourseTeacherAdapter(getActivity(),mTeacherList);
+            mAdapter = new TeacherAdapter(getActivity(),mTeacherList);
             mAdapter.setOnItemClickListener((adapterView, view, i, l) -> {
             });
             mAdapter.setLoadMoreListener(() -> {
@@ -153,11 +153,11 @@ public class CouserTeacherFragment  extends BaseFragment implements Observer<Art
         if(mPage == 1){
             mTeacherList.clear();
         }
-        mTeacherList.addAll(articleList.result);
+        mTeacherList.addAll(articleList.borrowList);
 
         setApapter();
 
-        if (articleList.result.size() < 10)
+        if (articleList.borrowList.size() < 10)
             mAdapter.canLoadMore(false);
         else
             mAdapter.canLoadMore(true);

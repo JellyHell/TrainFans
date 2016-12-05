@@ -99,11 +99,11 @@ public class MessageListAct extends BaseActivity implements Observer<ArticleList
         if(mPage == 1){
             mMessageList.clear();
         }
-        mMessageList.addAll(articleList.result);
+        mMessageList.addAll(articleList.borrowList);
 
         setApapter();
 
-        if (articleList.result.size() < 10)
+        if (articleList.borrowList.size() < 10)
             mAdapter.canLoadMore(false);
         else
             mAdapter.canLoadMore(true);

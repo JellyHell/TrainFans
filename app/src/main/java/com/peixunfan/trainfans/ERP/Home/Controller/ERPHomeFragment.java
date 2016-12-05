@@ -10,12 +10,13 @@ import android.widget.RelativeLayout;
 import com.infrastructure.net.RetrofitSingleton;
 import com.infrastructure.utils.IntentUtil;
 import com.peixunfan.trainfans.Base.BaseFragment;
-import com.peixunfan.trainfans.ERP.Courses.Controller.CourseHomeListAct;
+
+import com.peixunfan.trainfans.ERP.Bill.Controller.BillHomeAct;
+import com.peixunfan.trainfans.ERP.CourseSchedule.Controller.CourseScheduleAct;
+import com.peixunfan.trainfans.ERP.IntentStudent.Controller.IntentStudentHomeListAct;
+import com.peixunfan.trainfans.ERP.RenewWarning.Controller.GroupMessageHomeAct;
+import com.peixunfan.trainfans.UserCenter.Setting.Controller.QRCannerAct;
 import com.peixunfan.trainfans.Widgt.popupwindow.ExtendMenuPopWindow;
-import com.peixunfan.trainfans.ERP.Home.View.HomeGridAdapter;
-import com.peixunfan.trainfans.ERP.Message.Controller.MessageListAct;
-import com.peixunfan.trainfans.ERP.SignUp.Controller.SignUpAct;
-import com.peixunfan.trainfans.ERP.StudentList.Controller.StudentListAct;
 import com.peixunfan.trainfans.Recovery.Model.ArticleList;
 import com.peixunfan.trainfans.R;
 import com.peixunfan.trainfans.Widgt.RefreshableRecyclerView.RefreshableRecyclerView;
@@ -26,6 +27,18 @@ import java.util.Arrays;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import rx.Observer;
+
+
+import com.peixunfan.trainfans.ERP.AttendClassRecord.Controller.AttendClassRecordHomeAct;
+import com.peixunfan.trainfans.ERP.Class.Controller.ClassHomeListAct;
+import com.peixunfan.trainfans.ERP.Courses.Controller.CourseHomeListAct;
+import com.peixunfan.trainfans.ERP.PayoffMoney.Controller.PayoffMoneyHomeAct;
+import com.peixunfan.trainfans.ERP.RenewWarning.Controller.RenewWarningHomeAct;
+import com.peixunfan.trainfans.ERP.Teacher.Controller.TeacherListAct;
+import com.peixunfan.trainfans.ERP.Home.View.HomeGridAdapter;
+import com.peixunfan.trainfans.ERP.Message.Controller.MessageListAct;
+import com.peixunfan.trainfans.ERP.SignUp.Controller.SignUpAct;
+import com.peixunfan.trainfans.ERP.StudentList.Controller.StudentListAct;
 
 /**
  * Created by Administrator on 2016/11/1.
@@ -97,7 +110,20 @@ public class ERPHomeFragment extends BaseFragment implements Observer<ArticleLis
         mRefreshableRecyclerView.setmOnHomeBanerTitleMenuClick(new RefreshableRecyclerView.OnHomeBanerTitleMenuClick() {
             @Override
             public void onLeftMenuBtClick() {
-                new ExtendMenuPopWindow(getActivity(), mMainView, position -> mRefreshableRecyclerView.showLeftBt()).show();
+                new ExtendMenuPopWindow(getActivity(), mMainView, position -> {
+                    switch (position){
+                        case 0:
+                            IntentUtil.forwordToActivity(getActivity(), GroupMessageHomeAct.class);
+                            break;
+                        case 1:
+                            IntentUtil.forwordToActivity(getActivity(), QRCannerAct.class);
+                            break;
+                        case 2:
+                            IntentUtil.forwordToActivity(getActivity(), IntentStudentHomeListAct.class);
+                            break;
+                    }
+                    mRefreshableRecyclerView.showLeftBt();
+                }).show();
             }
 
             @Override
@@ -115,7 +141,7 @@ public class ERPHomeFragment extends BaseFragment implements Observer<ArticleLis
 
     private void loadData()
     {
-        mTitle = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.erp_home_type)));
+        mTitle = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.erp_home_type)));
         setApapter();
         mRefreshableRecyclerView.setBannerData();
     }
@@ -130,12 +156,47 @@ public class ERPHomeFragment extends BaseFragment implements Observer<ArticleLis
                         IntentUtil.forwordToActivity(getActivity(), SignUpAct.class);
                         break;
                     }
+                    case 1:
+                    {
+                        IntentUtil.forwordToActivity(getActivity(), AttendClassRecordHomeAct.class);
+                        break;
+                    }
+                    case 2:
+                    {
+                        IntentUtil.forwordToActivity(getActivity(), PayoffMoneyHomeAct.class);
+                        break;
+                    }
+                    case 3:
+                    {
+                        IntentUtil.forwordToActivity(getActivity(), CourseScheduleAct.class);
+                        break;
+                    }
                     case 4:{
                         IntentUtil.forwordToActivity(getActivity(),StudentListAct.class);
                         break;
                     }
+                    case 5:{
+                        IntentUtil.forwordToActivity(getActivity(),ClassHomeListAct.class);
+                        break;
+                    }
                     case 6:{
                         IntentUtil.forwordToActivity(getActivity(),CourseHomeListAct.class);
+                        break;
+                    }
+                    case 7:{
+                        IntentUtil.forwordToActivity(getActivity(),TeacherListAct.class);
+                        break;
+                    }
+                    case 8:{
+                        IntentUtil.forwordToActivity(getActivity(),RenewWarningHomeAct.class);
+                        break;
+                    }
+                    case 9:{
+                        IntentUtil.forwordToActivity(getActivity(),IntentStudentHomeListAct.class);
+                        break;
+                    }
+                    case 10:{
+                        IntentUtil.forwordToActivity(getActivity(),BillHomeAct.class);
                         break;
                     }
                 }

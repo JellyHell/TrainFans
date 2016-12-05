@@ -11,9 +11,17 @@
 
 
     <FrameLayout
-        android:id="@+id/eidtinfo_fragment"
+        android:id="@+id/left_fragment"
         android:layout_below="@+id/rlv_title_layout"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <FrameLayout
+        android:id="@+id/right_fragment"
+        android:layout_below="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="match_parent"/>
 
 

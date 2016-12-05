@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:background="@drawable/bg_homebanner">
+
+
+    <TextView
+        android:id="@+id/tv_money_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="100"
+        android:textColor="@color/color_ffffff"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:layout_height="42dp">
+
+        <!--本月实收-->
+        <RelativeLayout
+            android:id="@+id/left_income_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/left_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_ffffff"
+                android:text="0"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/left_income_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/gray_on_blue"
+                android:text="已购买"
+                android:layout_below="@+id/left_income"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/center_income_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/center_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/color_ffffff"
+                android:text="100"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/center_income_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/gray_on_blue"
+                android:text="赠送量"
+                android:layout_below="@+id/center_income"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+    <include
+        android:id="@+id/rlv_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        android:visibility="gone"
+        layout="@layout/view_base_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--正常登陆-->
+        <RelativeLayout
+            android:id="@+id/rlv_normallogin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_ffffff">
+
+            <ImageView
+                android:id="@+id/iv_app_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/app_icon"/>
+
+            <RelativeLayout
+                android:id="@+id/rlv_usermobile_layout"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/iv_app_icon"
+                android:layout_height="45dp">
+
+                <!--输入框-->
+                <EditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:dropDownVerticalOffset="10.0dip"
+                    android:dropDownWidth="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip"
+                    android:singleLine="true"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:textColor="@color/base_gray"
+                    android:textColorHint="@color/color_a0a0a0"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15.0sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:background="@drawable/background_for_all"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlv_userpsd_layout"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@+id/rlv_usermobile_layout"
+                android:layout_height="45dp">
+
+                <!--输入框-->
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:dropDownVerticalOffset="10.0dip"
+                    android:dropDownWidth="wrap_content"
+                    android:hint="请输入验证码"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/base_gray"
+                    android:textColorHint="@color/color_a0a0a0"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15.0sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_right_manager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/main_color"
+                    android:text="发送"/>
+
+                <ImageView
+                    android:id="@+id/iv_right_manager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:background="@drawable/background_for_all"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlv_login_bt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/rlv_userpsd_layout"
+                android:background="@drawable/bg_login_bt">
+
+                <TextView
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="16sp"
+                    android:text="登陆"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlv_other_logintype"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/rlv_login_bt">
+
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_toLeftOf="@+id/tv_logintype"
+                    android:background="@color/main_color"/>
+
+                <TextView
+                    android:id="@+id/tv_logintype"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp"
+                    android:text="密码登陆"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/tv_logintype"
+                    android:background="@color/main_color"/>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginBottom="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true">
+
+
+                <TextView
+                    android:id="@+id/tv_forgot_psd"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_a0a0a0"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal"
+                    android:layout_toLeftOf="@+id/center_line"
+                    android:text="忘记密码" />
+
+                <View
+                    android:id="@+id/center_line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:background="@color/color_a0a0a0"/>
+
+                <TextView
+                    android:id="@+id/tv_loginwith_checkmsm"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/center_line"
+                    android:textSize="14sp"
+                    android:gravity="center_horizontal"
+                    android:text="申请账号" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <!--申请账号-->
+        <RelativeLayout
+            android:id="@+id/rlv_applyaccount_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:visibility="gone"
+            android:background="@color/color_ffffff">
+
+            <RelativeLayout
+                android:id="@+id/rlv_applytype_layout"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+
+                <!--个人版-->
+                <RelativeLayout
+                    android:id="@+id/rlv_personal_version"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_account_apply"
+                    android:layout_height="80dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="个人版"
+                        android:textColor="@color/color_a0a0a0"
+                        android:textSize="17sp"/>
+
+                </RelativeLayout>
+
+                <!--工作室版-->
+                <RelativeLayout
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:id="@+id/rlv_workroom_version"
+                    android:layout_below="@+id/rlv_personal_version"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_account_apply"
+                    android:layout_height="80dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="工作室版"
+                        android:textColor="@color/color_a0a0a0"
+                        android:textSize="17sp"/>
+
+                </RelativeLayout>
+
+                <!--企业版-->
+                <RelativeLayout
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/rlv_company_version"
+                    android:layout_below="@+id/rlv_workroom_version"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/bg_account_apply"
+                    android:layout_height="80dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="企业版"
+                        android:textColor="@color/color_a0a0a0"
+                        android:textSize="17sp"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginBottom="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true">
+
+
+                <TextView
+                    android:id="@+id/tv_cancle_apply"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_color"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:gravity="center_horizontal"
+                    android:text="取消" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

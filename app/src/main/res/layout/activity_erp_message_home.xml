@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_all">
 
     <include
         android:id="@+id/rlv_title_layout"
         android:layout_width="match_parent"
         android:layout_height="48.0dip"
         layout="@layout/view_base_title" />
+
 
     <RelativeLayout
         android:id="@+id/container_layout"

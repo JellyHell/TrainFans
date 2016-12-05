@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_for_all"
+    android:layout_height="150dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rlv_institution_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:background="@drawable/selector_white_preferences_item" >
+
+        <!--企业信息-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="@color/color_ffffff">
+
+            <!--头像-->
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/display_image"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                fresco:roundedCornerRadius="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="@color/color_ffffff" />
+
+            <!--机构名称-->
+            <TextView
+                android:id="@+id/tv_institution_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路人甲钢琴艺术湾"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:layout_toRightOf="@+id/display_image"
+                android:layout_marginLeft="12dp"
+                android:layout_alignTop="@+id/display_image"
+                android:textColor="@color/base_gray" />
+
+
+            <!--机构电话-->
+            <TextView
+                android:id="@+id/tv_institution_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18811778682"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:layout_below="@+id/tv_institution_name"
+                android:layout_toRightOf="@+id/display_image"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/color_a0a0a0" />
+
+            <!--机构地址-->
+            <TextView
+                android:id="@+id/tv_institution_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北京市东城区富华大厦F座11层京金所"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/tv_institution_mobile"
+                android:layout_toRightOf="@+id/display_image"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/color_a0a0a0" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/icon_select_arrow"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/background_for_all"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rlv_sms_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:layout_below="@+id/rlv_institution_info"
+        android:clickable="true"
+        android:background="@drawable/selector_white_preferences_item" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_ffffff">
+
+            <!--短信余量-->
+            <TextView
+                android:id="@+id/tv_sms_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="短信余量"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/base_gray" />
+
+
+            <!--剩余数量-->
+            <TextView
+                android:id="@+id/tv_remain_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="189"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@+id/iv_arrow"
+                android:textColor="@color/color_a0a0a0" />
+
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/icon_select_arrow"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/background_for_all"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

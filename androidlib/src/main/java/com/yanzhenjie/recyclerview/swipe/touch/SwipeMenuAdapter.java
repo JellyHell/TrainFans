@@ -19,6 +19,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.peixunfan.androidlib.R;
 import com.yanzhenjie.recyclerview.swipe.OnSwipeMenuItemClickListener;
@@ -89,5 +90,11 @@ public abstract class SwipeMenuAdapter<VH extends RecyclerView.ViewHolder> exten
      */
     public void onCompatBindViewHolder(VH holder, int position, List<Object> payloads) {
         onBindViewHolder(holder, position);
+    }
+
+    protected AdapterView.OnItemClickListener mItemClickListener;
+
+    public void setOnItemClickListener(AdapterView.OnItemClickListener pClickListener) {
+        mItemClickListener = pClickListener;
     }
 }
